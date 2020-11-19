@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+<style>
+    html {
+        width: 100%;
+        min-height: 100%;
+        overflow: auto;
+    }
+
+    body {
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://ah4axr.github.io/temp/Back.png");
+    }
+
+    #content {
+        padding-top: 14%;
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        min-height: 100%;
+        padding-right: 3%;
+    }
+
+    h1 {
+        color: #3D66A1;
+    }
+
+    h3 {
+        color: #666666;
+    }
+
+    #buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        justify-content: space-between;
+    }
+
+    #questionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+    }
+
+    #newQuestion {
+        width: 100%;
+        height: 78px;
+        background-color: #FFFFFF;
+        color: #666666;
+        border-radius: 5px;
+        font-size: 24px;
+        margin-top: 1%;
+    }
+
+    #questionHeaderText {
+        color: #666666;
+        font-size: 18px;
+    }
+
+    #questionText {
+        color: #666666;
+        font-size: 14px;
+        border: 1px solid transparent;
+    }
+
+    #answerText {
+        color: #666666;
+        font-size: 12px;
+        width: 10%;
+        border: 1px solid transparent;
+        height: 15px;
+    }
+
+    #question {
+        width: 100%;
+        border: 2px solid #c4c4c4;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        padding: 1%;
+        margin-top: 1%;
+    }
+</style>
+
+<body>
+    <div id='content'>
+        <div id='questionContainer'>
+            <div id='question'>
+                <p id='questionHeaderText'>Question 1</p>
+                <br />
+                <input class="form-control" type='text' id='questionText' value="What is the 4th planet from the sun?">
+
+                <input class="form-control" type='text' id='answerText' value="○ Mercury">
+                <input class="form-control" type='text' id='answerText' value="○ Venus">
+                <input class="form-control" type='text' id='answerText' value="○ Earth">
+                <input class="form-control" type='text' id='answerText' value="• Mars">
+                <input class="form-control" type='text' id='answerText' value="○ Jupiter">
+                <input class="form-control" type='text' id='answerText' value="○ Saturn">
+                <input class="form-control" type='text' id='answerText' value="○ Uranus">
+                <input class="form-control" type='text' id='answerText' value="○ Neptune">
+                <input class="form-control" type='text' id='answerText' value="○ Pluto">
+            </div>
+            <div id='question'>
+                <p id='questionHeaderText'>Question 2</p>
+                <br />
+                <input class="form-control" type='text' id='questionText' value="Pluto is a dwarf planet.">
+
+                <input class="form-control" type='text' id='answerText' value="• True">
+                <input class="form-control" type='text' id='answerText' value="○ Flase">
+            </div>
+            <div id='question'>
+                <p id='questionHeaderText'>Question 3</p>
+                <br />
+                <input class="form-control" type='text' id='questionText' value="In 500 words or less, explain the theory of relativity.">
+            </div>
+
+            <button id='newQuestion'>+ Add Question</button>
+
+            <div id="buttons">
+                <button class="btn btn-dark"><a href="question2.html" style="color: white">Back</a></button>
+                <button class="btn btn-dark"><a href="settings.html" style="color: white">Next</a></button>
+            </div>
+        </div>
+</body>
+</html>
