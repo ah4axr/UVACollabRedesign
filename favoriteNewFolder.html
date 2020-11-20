@@ -9,6 +9,14 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+    function process() {
+        var temp = window.location.search;
+        var parameters = new URLSearchParams(temp);
+        var title = parameters.get("fName");
+        document.getElementById("folderName").innerHTML = title;
+    }
+</script>
 
 
 <style>
@@ -104,8 +112,6 @@
     #folderTabs {
         display: flex;
         flex-direction: row;
-        border: 1px solid #666666;
-        border-radius: 5px;
     }
 
     #folder {
@@ -115,25 +121,14 @@
         align-items: center;
         width: 225px;
         height: 225px;
-    }
-    #newMenu {
-        display: flex;
-        flex-direction: column;
-        width: 100px;
-        height: 100px;
         border: 1px solid #666666;
         border-radius: 5px;
-    }
-    #menuTab {
-        display: flex;
-        flex-direction: row;
-        height: 33px;
-        padding: 2px;
+        margin-right: 20px;
     }
 </style>
 <html>
 
-<body>
+<body onload="process()">
     <img src='Top.png' />
     <div id='content'>
         <img src='SideBar.png' />
@@ -148,33 +143,15 @@
             </div>
             <div id='container'>
                 <h1>My Favorites</h1>
-                <div style="display: flex; flex-direction: row; width: 40%; justify-content: space-between">
-                    <button id="newFold"><a href="addFolder.html" style="color: #666666; font-size: 18px">+ New</a></button>
-                    <div id="newMenu">
-                        <a href="addFolder.html" style="width: 100%; height: 100%">
-                            <div id="menuTab" style="border-bottom: 1px solid #666666;">
-                                <img id='tabPic' src='SmallFolder.png' style="width: 15px; height: 15px; " />
-                                <p style="font-size: 14px; color: #666666">Folder</p>
-                            </div>
-                        </a>
-                        <a href="addFavoriteQuestion.html" style="width: 100%; height: 100%">
-                            <div id="menuTab" style="border-bottom: 1px solid #666666;">
-                                <img id='tabPic' src='Question.png' style="width: 15px; height: 15px" />
-                                <p style="font-size: 14px; color: #666666">Question</p>
-                            </div>
-                        </a>
-                        <a href="importQuestion.html" style="width: 100%; height: 100%">
-                            <div id="menuTab">
-                                <img id='tabPic' src='Import.png' style="width: 15px; height: 15px" />
-                                <p style="font-size: 14px; color: #666666">Import</p>
-                            </div>
-                            </a>
-                    </div>
-                </div>
+                <button id="newFold"><a href="favoriteMenu.html" style="color: #666666; font-size: 18px">+ New</a></button>
                 <div id="folderTabs">
                     <div id="folder">
                         <img id='tabPic' src='Folder.png' />
                         <h3>Exams</h3>
+                    </div>
+                    <div id="folder">
+                        <img id='tabPic' src='Folder.png' />
+                        <h3 id='folderName'></h3>
                     </div>
                 </div>
             </div>

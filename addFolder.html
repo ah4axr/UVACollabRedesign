@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+    html {
+        height: 100%;
+    }
+    body {
+        background-image: url('FavoriteBack.png');
+        min-height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #popUp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 30%;
+        height: 30%;
+        padding: 20px;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+    }
+    #buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        justify-content: space-between;
+    }
+</style>
+<html>
+
+<body>
+    <div id="popUp">
+        <form method="GET" action="favoriteNewFolder.html">
+            <h3>Folder Name</h3>
+            <input class="form-control" type='text' id="box" name='fName'>
+            <div id="buttons">
+                <button class="btn btn-dark"><a href="favorite.html" style="color: white">Cancel</a></button>
+                <input type="submit" value="Submit" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
