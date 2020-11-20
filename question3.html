@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
+<script src="dragDrop.js"></script>
+
 <style>
 
     #buttons {
@@ -23,7 +25,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 100%;
     }
 
     #newQuestion {
@@ -62,6 +63,7 @@
         border-radius: 5px;
         padding: 1%;
         margin-top: 1%;
+        cursor: move;
     }
 </style>
 
@@ -80,8 +82,8 @@
                     <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
                 </div>
                 <div id='container'>
-                    <div id='questionContainer'>
-                        <div id='question'>
+                    <div id='questionContainer' class="container">
+                        <div id='question' draggable="true" class="box">
                             <p id='questionHeaderText'>Question 1</p>
                             <br />
                             <input class="form-control" type='text' id='questionText' value="What is the 4th planet from the sun?">
@@ -96,7 +98,7 @@
                             <input class="form-control" type='text' id='answerText' value="○ Neptune">
                             <input class="form-control" type='text' id='answerText' value="○ Pluto">
                         </div>
-                        <div id='question'>
+                        <div id='question' draggable="true" class="box">
                             <p id='questionHeaderText'>Question 2</p>
                             <br />
                             <input class="form-control" type='text' id='questionText' value="Pluto is a dwarf planet.">
@@ -104,7 +106,7 @@
                             <input class="form-control" type='text' id='answerText' value="• True">
                             <input class="form-control" type='text' id='answerText' value="○ Flase">
                         </div>
-                        <div id='question'>
+                        <div id='question' draggable="true" class="box">
                             <p id='questionHeaderText'>Question 3</p>
                             <br />
                             <input class="form-control" type='text' id='questionText' value="In 500 words or less, explain the theory of relativity.">

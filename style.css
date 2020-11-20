@@ -73,3 +73,19 @@ h1 {
 h3 {
     color: #666666;
 }
+
+
+[draggable] {
+    user-select: none;
+}
+
+
+.box {
+    cursor: move;
+}
+
+.box.over {
+}
+.container {
+    padding: 0%;
+}
