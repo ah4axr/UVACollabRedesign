@@ -1,11 +1,137 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
 <head>
-    <meta charset="utf-8" />
-    <title>asdf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
 </head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+    #box {
+        width: 192px;
+        height: 35px;
+        margin-bottom: 18px;
+    }
+
+    #buttons {
+        display: flex;
+        width: 80%;
+        padding-left: 20%;
+        justify-content: space-between;
+    }
+
+    #quiz {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid;
+        border-color: #c4c4c4;
+        border-radius: 5px;
+        padding-bottom: 1%;
+        margin-bottom: 1%;
+    }
+
+    #quizLeft {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1%;
+        padding-top: .5%;
+        width: 40%;
+        height: 80%;
+    }
+
+    #quizRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 1%;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    #title {
+        color: #666666;
+        font-size: 18px;
+    }
+
+    #textContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 17px;
+    }
+
+    #quizInfoText {
+        color: #666666;
+        font-size: 14px;
+    }
+
+    #quizButtons {
+        display: flex;
+        width: 80%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #quizActive {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-start;
+        padding: 1%;
+    }
+
+    #quizActiveText {
+        color: #666666;
+        font-size: 14px;
+    }
+    #newFold {
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+    }
+    #folderTabs {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #666666;
+        border-radius: 5px;
+    }
+    #folder {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<html>
+
 <body>
-    <h3>as;lkdjfl;akjsdfl</h3>
+    <img src='Top.png' />
+    <div id='content'>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
+
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+                <h1>My Favorites</h1>
+                <button id="newFold"><a href="addFolder.html" style="color: #666666">+ New</a></button>
+                <div id="folderTabs">
+                    <div id="folder">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
 </body>
 </html>

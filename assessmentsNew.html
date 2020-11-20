@@ -8,7 +8,7 @@
     </title>
 </head>
 
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <script>
     function process() {
@@ -19,44 +19,20 @@
         var openT = parameters.get("openTime");
         var dueD = parameters.get("dueDate");
         var dueT = parameters.get("dueTime");
+        var resubmissions = parameters.get("resub");
+        var lateSubmissions = parameters.get("lateSub");
         var timeLimit1A = parameters.get("tLim1a");
         var timeLimit1B = parameters.get("tLim1b");
         document.getElementById("newQuizTitle").innerHTML = title;
         document.getElementById("newQuizInfoText1").innerHTML = timeLimit1A + ", " + timeLimit1B;
         document.getElementById("newQuizInfoText2").innerHTML = openD + ", " + openT;
         document.getElementById("newQuizInfoText3").innerHTML = dueD + ", " + dueT;
+        document.getElementById("newQuizResub").innerHTML = "Resubmissions: " + resubmissions;
+        document.getElementById("newQuizLateSub").innerHTML = "Late Submissions: " + lateSubmissions;
     }
 </script>
 
 <style>
-    html {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-repeat: no-repeat;
-    }
-
-    body {
-        background-size: cover;
-        background-color: white;
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        min-height: 100%;
-        background-image: url("https://ah4axr.github.io/temp/Back.png");
-        background-repeat: no-repeat;
-    }
-
-    #content {
-        overflow: auto;
-        padding-top: 14%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        width: 83%;
-        padding-right: 3%;
-    }
 
     #box {
         width: 192px;
@@ -191,51 +167,65 @@
         color: #666666;
         font-size: 14px;
     }
-    #newQuizResub {
+    #newQuizLateSub {
         color: #666666;
         font-size: 14px;
     }
+
 </style>
 
 <html>
 
 <body onload="process()">
+    <img src='Top.png' />
     <div id='content'>
-        <div id='assessmentListContainer'>
-            <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
-            <div id='quiz'>
-                <div id='quizLeft'>
-                    <p id='newQuizTitle'></p>
-                    <div id='textContainer'>
-                        <p id='quizInfoText'>Time Limit</p>
-                        <p id='newQuizInfoText1'></p>
-                    </div>
-                    <div id='textContainer'>
-                        <p id='quizInfoText'>Released</p>
-                        <p id='newQuizInfoText2'></p>
-                    </div>
-                    <div id='textContainer'>
-                        <p id='quizInfoText'>Closed</p>
-                        <p id='newQuizInfoText3'></p>
-                    </div>
-                </div>
-                <div id='quizRight'>
-                    <div id='quizActive'>
-                        <p id='newQuizResub'></p>
-                        <p id='newQuizLateSub'></p>
-                    </div>
-                    <div id='quizButtons'>
-                        <img id='bottomButton' src='Favorite.png' />
-                        <img id='bottomButton' src='Grades.png' />
-                        <a href="settings.html" style="color: white">
-                            <img id='bottomButton' src='Edit.png' />
-                        </a>
-                        <img id='bottomButton' src='Copy.png' />
-                        <img id='bottomButton' src='Delete.png' />
-                    </div>
-                </div>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
 
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Students</a></button>
             </div>
+            <div id='container'>
+                <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
+                <div id='quiz'>
+                    <div id='quizLeft'>
+                        <p id='newQuizTitle'></p>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='newQuizInfoText1'></p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='newQuizInfoText2'></p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='newQuizInfoText3'></p>
+                        </div>
+                    </div>
+                    <div id='quizRight'>
+                        <div id='quizActive'>
+                            <p id='newQuizResub'></p>
+                            <p id='newQuizLateSub'></p>
+                        </div>
+                        <div id='quizButtons'>
+                            <img id='bottomButton' src='Favorite.png' />
+                            <img id='bottomButton' src='Grades.png' />
+                            <a href="settings.html" style="color: white">
+                                <img id='bottomButton' src='Edit.png' />
+                            </a>
+                            <img id='bottomButton' src='Copy.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
                 <div id='quiz'>
                     <div id='quizLeft'>
                         <p id='title'>Midterm</p>
@@ -264,7 +254,9 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -299,7 +291,9 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -333,7 +327,9 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -366,7 +362,9 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -400,7 +398,9 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -433,10 +433,14 @@
                                 <img id='bottomButton' src='Edit.png' />
                             </a>
                             <img id='bottomButton' src='Copy.png' />
-                            <img id='bottomButton' src='Delete.png' />
+                            <a href="attempt.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </body>
 </html>
