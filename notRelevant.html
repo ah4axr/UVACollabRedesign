@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+    #backButton {
+        width: 500px;
+        height: 130px;
+        background-color: #3365A6;
+        color: white;
+        border-radius: 5px;
+        font-size: 32px;
+        margin-bottom: 1.5%;
+        margin-top: 1%;
+    }
+</style>
+<html>
+
+<body>
+    <img src='Top.png' />
+    <div id='content'>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
+
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="submissionsOverview.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+
+                <h1>The button you just clicked was not relevant to the task given. Click back and try again!</h1>
+
+                <button id="backButton" onclick="back()">Back</button>
+
+                <script>
+                    function back() {
+                        window.history.back();
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

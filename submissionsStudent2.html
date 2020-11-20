@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+
+    #buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        justify-content: space-between;
+    }
+
+    #questionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    #newQuestion {
+        width: 100%;
+        height: 78px;
+        background-color: #FFFFFF;
+        color: #666666;
+        border-radius: 5px;
+        font-size: 24px;
+        margin-top: 1%;
+    }
+
+    #questionHeaderText {
+        color: #666666;
+        font-size: 18px;
+    }
+
+    #questionText {
+        color: #666666;
+        font-size: 14px;
+        border: 1px solid transparent;
+    }
+
+    #answerText {
+        color: #666666;
+        font-size: 12px;
+        border: 1px solid transparent;
+    }
+
+    #question {
+        width: 100%;
+        border: 2px solid #c4c4c4;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        padding: 1%;
+        margin-top: 1%;
+    }
+
+    #titleButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #titleButtons {
+    }
+
+    #lightButton {
+        color: #666666;
+        border: 1px solid #666666;
+        border-radius: 5px;
+    }
+    #topOfQuestion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #arrows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 20%;
+    }
+    #points {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #pointValue {
+        width: 15%;
+    }
+</style>
+
+<html>
+<body>
+    <img src='Top.png' />
+    <div id='content'>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
+
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="submissionsOverview.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+                <div id='questionContainer'>
+                    <div id="titleButtonsContainer">
+                        <h3>Assessment</h3>
+                        <div id="titleButtons">
+                            <button class="btn btn-light" id="lightButton"><a href="submissionsOverview.html" style="color: #666666">Overview</a></button>
+                            <button class="btn btn-light" id="lightButton"><a href="submissionsQuestion1.html" style="color: #666666">By Question</a></button>
+                            <button class="btn btn-dark"><a href="submissionsStudent1.html" style="color: white">By Student</a></button>
+                        </div>
+                    </div>
+                    <div id="arrows">
+                        <a href="submissionsOverview.html">
+                            <img src="Backward.png" />
+                        </a>
+                        <p id="questionHeaderText">Student 2</p>
+                        <a href="submissionsOverview.html">
+                            <img src="Forward.png" />
+                        </a>
+                    </div>
+                    <br />
+                    <div id='question'>
+                        <div id="topOfQuestion">
+                            <p id='questionHeaderText'>Question 1</p>
+                            <div id="points">
+                                <input class="form-control" type='text' id='pointValue'>
+                                <h3>/1</h3>
+                            </div>
+                        </div>
+                        <br />
+                        <p id='questionText'>What is the 4th planet from the sun?"</p>
+
+                        <input class="form-control" type='text' id='answerText' value="○ Mercury">
+                        <input class="form-control" type='text' id='answerText' value="○ Venus">
+                        <input class="form-control" type='text' id='answerText' value="○ Earth">
+                        <input class="form-control" type='text' id='answerText' value="• Mars">
+                        <input class="form-control" type='text' id='answerText' value="○ Jupiter">
+                        <input class="form-control" type='text' id='answerText' value="○ Saturn">
+                        <input class="form-control" type='text' id='answerText' value="○ Uranus">
+                        <input class="form-control" type='text' id='answerText' value="○ Neptune">
+                        <input class="form-control" type='text' id='answerText' value="○ Pluto">
+                    </div>
+                    <div id='question'>
+                        <div id="topOfQuestion">
+                            <p id='questionHeaderText'>Question 1</p>
+                            <div id="points">
+                                <input class="form-control" type='text' id='pointValue'>
+                                <h3>/1</h3>
+                            </div>
+                        </div>
+                        <br />
+                        <p id='questionText'>Pluto is a dwarf planet."</p>
+
+                        <input class="form-control" type='text' id='answerText' value="• True">
+                        <input class="form-control" type='text' id='answerText' value="○ Flase">
+                    </div>
+                    <div id='question'>
+                        <div id="topOfQuestion">
+                            <p id='questionHeaderText'>Question 1</p>
+                            <div id="points">
+                                <input class="form-control" type='text' id='pointValue'>
+                                <h3>/1</h3>
+                            </div>
+                        </div>
+                        <br />
+                        <p id='questionText'>In 500 words or less, explain the theory of relativity."</p>
+                        <p id="answerText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec magna quis mauris vulputate volutpat. Sed ac condimentum magna. Vestibulum ante
+                            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean felis mi, tristique non
+                            fermentum quis, dignissim vitae leo. Suspendisse hendrerit vitae ligula non hendrerit. Proin
+                            condimentum iaculis condimentum. Etiam dictum rhoncus urna. Suspendisse aliquam urna vel leo ultrices, ut
+                            egestas felis lacinia. Pellentesque gravida tristique ligula efficitur aliquam. Curabitur sed tortor eu diam ultricies
+                            blandit. Nam eget egestas sem. Nam euismod suscipit metus. Sed est ex, efficitur vitae libero id, posuere condimentum leo.
+                            Nam fermentum nisl ante, eu lobortis mi tincidunt in. Duis vel velit quam. Praesent aliquam faucibus fermentum.
+                            Vestibulum nibh est, auctor quis luctus pulvinar, sollicitudin a orci. Phasellus vestibulum est non velit
+                            condimentum euismod. Donec vel laoreet odio, vel auctor enim. Nunc molestie eros sit
+                            amet dolor lobortis, quis commodo quam venenatis. Proin non est a quam scelerisque condimentum.
+                            Pellentesque id faucibus orci. Phasellus lobortis, ante sed vulputate tristique, nibh sapien venenatis
+                            elit, eget posuere risus felis in purus. Sed ut vulputate leo. Aenean fringilla sodales justo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

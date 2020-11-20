@@ -11,10 +11,30 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script>
     function process() {
-    var temp = window.location.search;
-    var parameters = new URLSearchParams(temp);
-    var title = parameters.get("qName");
-    document.getElementById("questionName").innerHTML = title;
+        var temp = window.location.search;
+        var parameters = new URLSearchParams(temp);
+        var title = parameters.get("choice");
+        if(title == "Q1")
+        {
+            document.getElementById("tabPicImport").src = "Question.png";
+            document.getElementById("folderName").innerHTML = "4th Planet";
+        }
+        else if(title == "Q2")
+        {
+            document.getElementById("tabPicImport").src = "Question.png";
+            document.getElementById("folderName").innerHTML = "Pluto";
+        }
+        else if(title == "Q3")
+        {
+            document.getElementById("tabPicImport").src = "Question.png";
+            document.getElementById("folderName").innerHTML = "Relativity";
+        }
+        else
+        {
+            document.getElementById("tabPicImport").src = "Folder.png";
+            document.getElementById("folderName").innerHTML = title;
+        }
+
     }
 </script>
 
@@ -150,8 +170,8 @@
                         <h3>Exams</h3>
                     </div>
                     <div id="folder">
-                        <img id='tabPic' src='Question.png' />
-                        <h3 id='questionName'></h3>
+                        <img id='tabPicImport'></img>
+                        <h3 id='folderName'></h3>
                     </div>
                 </div>
             </div>

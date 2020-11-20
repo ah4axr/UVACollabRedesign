@@ -1,4 +1,4 @@
-﻿<!doctype html
+﻿<!doctype html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -63,6 +63,20 @@
         padding: 1%;
         margin-top: 1%;
     }
+    #titleButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    #titleButtons {
+
+    }
+    #lightButton {
+        color: #666666;
+        border: 1px solid #666666;
+        border-radius: 5px;
+    }
 </style>
 
 <html>
@@ -81,31 +95,41 @@
                 </div>
                 <div id='container'>
                     <div id='questionContainer'>
+                        <div id="titleButtonsContainer">
+                            <h3>Assessment</h3>
+                            <div id="titleButtons">
+                                <button class="btn btn-dark"><a href="submissionsOverview.html" style="color: white">Overview</a></button>
+                                <button class="btn btn-light" id="lightButton"><a href="submissionsQuestion1.html" style="color: #666666">By Question</a></button>
+                                <button class="btn btn-light" id="lightButton"><a href="submissionsStudent1.html" style="color: #666666">By Student</a></button>
+
+                            </div>
+                        </div>
                         <div id='question'>
                             <p id='questionHeaderText'>Question 1</p>
                             <br />
-                            <input class="form-control" type='text' id='questionText' value="What is the 4th planet from the sun?">
+                            <p id="questionText">What is the 4th planet from the sun?</p>
+                            <img src="MultiplePie.png" />
 
-                            <input class="form-control" type='text' id='answerText' value="○ Mercury">
-                            <input class="form-control" type='text' id='answerText' value="○ Venus">
-                            <input class="form-control" type='text' id='answerText' value="○ Earth">
-                            <input class="form-control" type='text' id='answerText' value="• Mars">
-                            <input class="form-control" type='text' id='answerText' value="○ Jupiter">
-                            <input class="form-control" type='text' id='answerText' value="○ Saturn">
-                            <input class="form-control" type='text' id='answerText' value="○ Uranus">
-                            <input class="form-control" type='text' id='answerText' value="○ Neptune">
-                            <input class="form-control" type='text' id='answerText' value="○ Pluto">
                         </div>
-                        <button id='newQuestion'><a href="question2.html" style='color: #666666'>+ Add Question</a></button>
+                        <div id='question'>
+                            <p id='questionHeaderText'>Question 2</p>
+                            <br />
+                            <p id="questionText">Pluto is a dwarf planet."</p>
+                            <img src="TFPie.png" />
+                        </div>
+                        <div id='question'>
+                            <p id='questionHeaderText'>Question 3</p>
+                            <br />
+                            <p id="questionText">In 500 words or less, explain the theory of relativity."</p>
+                        </div>
 
                         <div id="buttons">
-                            <button class="btn btn-dark"><a href="addQuestion.html" style="color: white">Back</a></button>
+                            <button class="btn btn-dark"><a href="question2.html" style="color: white">Back</a></button>
                             <button class="btn btn-dark"><a href="settings.html" style="color: white">Next</a></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>

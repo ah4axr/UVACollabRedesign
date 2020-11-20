@@ -52,29 +52,29 @@
             <div id="navBarButtons">
                 <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
                 <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
-                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
-                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+                <button id="navButton"><a href="submissionsOverview.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
             </div>
             <div id='container'>
                     <form id='settingsContainer' method="GET" action="assessmentsNew.html">
-                        <input class="form-control" type='text' id="title" value="Quiz" name='qTitle'>
+                        <input class="form-control" type='text' id="title" value="Quiz" name='qTitle' required>
                         <h3>Open Date</h3>
 
                         <div id='ins'>
-                            <input class="form-control" type='date' id="box" style="margin-right: 18px" name='openDate'>
-                            <input class="form-control" type='time' id="box" name='openTime'>
+                            <input class="form-control" type='date' id="box" style="margin-right: 18px" name='openDate' required>
+                            <input class="form-control" type='time' id="box" name='openTime' required>
                         </div>
 
                         <h3>Due Date</h3>
                         <div id='ins'>
-                            <input class="form-control" type='date' id="box" style="margin-right: 18px" name='dueDate'>
-                            <input class="form-control" type='time' id="box" name='dueTime'>
+                            <input class="form-control" type='date' id="box" style="margin-right: 18px" name='dueDate' required>
+                            <input class="form-control" type='time' id="box" name='dueTime' required>
                         </div>
 
                         <h3>Time Limit(s)</h3>
                         <div id='ins'>
-                            <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a'>
-                            <input class="form-control" type='text' id="box" name='tLim1b'>
+                            <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' required>
+                            <input class="form-control" type='text' id="box" name='tLim1b' required>
                         </div>
                         <div id='ins'>
                             <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim2a'>
@@ -87,11 +87,11 @@
 
                         <h3>Allowed Resubmissions</h3>
                         <div id='ins'>
-                            <input class="form-control" type='text' id="box" name='resub'>
+                            <input class="form-control" type='text' id="box" name='resub' required>
                         </div>
                         <h3>Allowed Late Submissions</h3>
                         <div id='ins'>
-                            <input class="form-control" type='text' id="box" name='lateSub'>
+                            <input class="form-control" type='text' id="box" name='lateSub' required>
                         </div>
 
                         <div id="buttons">

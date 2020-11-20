@@ -1,0 +1,332 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-image: url('FavoriteBack.png');
+        min-height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #popUp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    #buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        justify-content: space-between;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    #questionText {
+        color: #666666;
+        font-size: 18px;
+        border: 1px solid transparent;
+    }
+
+    #answerText {
+        color: #666666;
+        font-size: 12px;
+        border: 1px solid transparent;
+        height: 15px;
+    }
+    #questionSelection {
+        border: 1px solid #666666;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    #bothImports {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #importExistingQuestion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #importExistingAssessment {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #quiz {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        border: solid;
+        border-color: #c4c4c4;
+        border-radius: 5px;
+        padding-bottom: 1%;
+        margin-bottom: 1%;
+    }
+
+    #title {
+        color: #666666;
+        font-size: 14px;
+        width: 100%;
+        height: 11px;
+        padding-left: 2px;
+    }
+    #radioTitle {
+        height: 10px;
+    }
+    .form-control {
+        width: 0%;
+    }
+    #radioTitles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2px;
+    }
+
+    #textContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 11px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    #quizInfoText {
+        color: #666666;
+        font-size: 10px;
+    }
+
+    #quizButtons {
+        display: flex;
+        width: 80%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #quizActive {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-start;
+        padding: 1%;
+    }
+
+    #quizActiveText {
+        color: #666666;
+        font-size: 14px;
+    }
+    #columnPop {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+    }
+    #answers {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+</style>
+<html>
+
+<body>
+    <form method="GET" action="favoriteImport.html" style="width: 80%">
+        <div id="columnPop">
+            <div id="popUp">
+                <div id="importExistingQuestion">
+                    <h1>Import Existing Question</h1>
+                    <br />
+                    <div id='questionSelection'>
+                        <div id="radioTitles">
+                            <p id="title">What is the 4th planet from the sun?</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Q1" name="choice">
+                        </div>
+                        <div id="answers">
+                            <input type='text' id='answerText' value="○ Mercury">
+                            <input type='text' id='answerText' value="○ Venus">
+                            <input type='text' id='answerText' value="○ Earth">
+                            <input type='text' id='answerText' value="• Mars">
+                            <input type='text' id='answerText' value="○ Jupiter">
+                            <input type='text' id='answerText' value="○ Saturn">
+                            <input type='text' id='answerText' value="○ Uranus">
+                            <input type='text' id='answerText' value="○ Neptune">
+                            <input type='text' id='answerText' value="○ Pluto">
+                        </div>
+                    </div>
+                    <div id="questionSelection">
+                        <div id="radioTitles">
+                            <p id="title">Pluto is a dwarf planet.</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Q2" name="choice">
+                        </div>
+
+                        <div id="answers">
+                            <input type='text' id='answerText' value="• True">
+                            <input type='text' id='answerText' value="○ Flase">
+                        </div>
+                    </div>
+                    <div id='questionSelection'>
+                        <div id="radioTitles">
+                            <p id="title">In 500 words or less, explain the theory of relativity.</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Q3" name="choice">
+                        </div>
+                    </div>
+                </div>
+                <div id="importExistingAssessment">
+                    <h1>Import Existing Assessment</h1>
+                    <br />
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Midterm</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Midterm" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>60 mins (General), 90 mins (SDAC 1.5x), 120 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Sunday, November 1, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, November 1, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+
+
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Quiz 8</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Quiz 8" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, October 26, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, November 1, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Quiz 7</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Quiz 7" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, October 17, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, October 25, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Quiz 6</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Quiz 6" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, October 12, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, October 18, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+
+
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Quiz 5</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Quiz 5" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, October 5, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, October 11, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+
+                    <div id='quiz'>
+                        <div id="radioTitles">
+                            <p id="title">Quiz 4</p>
+                            <input class="form-control" type='radio' id='radioTitle' value="Quiz 4" name="choice">
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, September 28, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, October 4, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="buttons">
+                <button class="btn btn-dark"><a href="favorite.html" style="color: white">Cancel</a></button>
+                <input type="submit" value="Submit" class="btn btn-dark" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

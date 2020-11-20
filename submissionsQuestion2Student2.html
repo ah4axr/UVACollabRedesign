@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+
+    #buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+        justify-content: space-between;
+    }
+
+    #questionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    #newQuestion {
+        width: 100%;
+        height: 78px;
+        background-color: #FFFFFF;
+        color: #666666;
+        border-radius: 5px;
+        font-size: 24px;
+        margin-top: 1%;
+    }
+
+    #questionHeaderText {
+        color: #666666;
+        font-size: 18px;
+    }
+
+    #questionText {
+        color: #666666;
+        font-size: 14px;
+        border: 1px solid transparent;
+    }
+
+    #answerText {
+        color: #666666;
+        font-size: 12px;
+        border: 1px solid transparent;
+        height: 15px;
+    }
+
+    #question {
+        width: 100%;
+        border: 2px solid #c4c4c4;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        padding: 1%;
+        margin-top: 1%;
+    }
+
+    #titleButtonsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #titleButtons {
+    }
+
+    #lightButton {
+        color: #666666;
+        border: 1px solid #666666;
+        border-radius: 5px;
+    }
+    #topOfQuestion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #topOfQuestion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #arrows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 20%;
+    }
+    #points {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #pointValue {
+        width: 15%;
+    }
+</style>
+
+<html>
+<body>
+    <img src='Top.png' />
+    <div id='content'>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
+
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="submissionsOverview.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+                <div id='questionContainer'>
+                    <div id="titleButtonsContainer">
+                        <h3>Assessment</h3>
+                        <div id="titleButtons">
+                            <button class="btn btn-light" id="lightButton"><a href="submissionsOverview.html" style="color: #666666">Overview</a></button>
+                            <button class="btn btn-dark"><a href="submissionsQuestion1.html" style="color: white">By Question</a></button>
+                            <button class="btn btn-light" id="lightButton"><a href="submissionsStudent1.html" style="color: #666666">By Student</a></button>
+                        </div>
+                    </div>
+                    <p id="questionHeaderText">Student 2</p>
+                    <div id='question'>
+                        <div id="topOfQuestion">
+                            <div id="arrows">
+                                <a href="submissionsQuestion1Student2.html">
+                                    <img src="Backward.png" />
+                                </a>
+                                <p id="questionHeaderText">Question 2</p>
+                                <a href="submissionsQuestion3Student2.html">
+                                    <img src="Forward.png" />
+                                </a>
+                            </div>
+                            <div id="points">
+                                <input class="form-control" type='text' id='pointValue'>
+                                <h3>/1</h3>
+                            </div>
+                        </div>
+                        <br />
+                        <p id='questionText'>Pluto is a dwarf planet."</p>
+
+                        <input class="form-control" type='text' id='answerText' value="• True">
+                        <input class="form-control" type='text' id='answerText' value="○ Flase">
+                    </div>
+
+                    <div id="buttons">
+                        <button class="btn btn-dark"><a href="submissionsOverview.html" style="color: white">Back</a></button>
+                        <button class="btn btn-dark"><a href="submissionsOverview.html" style="color: white">Next</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
