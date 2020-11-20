@@ -1,26 +1,69 @@
 
 html {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     overflow: auto;
 }
 
 body {
     background-size: cover;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-#top {
-    background-image: url("https://ah4axr.github.io/temp/Top.png");
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 
-#content {
+#main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+
+#navBarButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#navButton {
+    border: 2px solid #e5e5e5;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#newAssessment {
+    width: 349px;
+    height: 74px;
+    background-color: #3365A6;
+    color: white;
+    border-radius: 5px;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 h1 {

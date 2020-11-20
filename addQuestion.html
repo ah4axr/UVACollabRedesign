@@ -1,5 +1,4 @@
 ﻿<!doctype html>
-<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,53 +8,13 @@
     </title>
 </head>
 
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<script>
-    function process() {
-    var x = document.getElementById("password").value;
-    document.getElementById("demo").innerHTML = x;
-    }
-</script>
 
 <style>
-    html {
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-    }
-
-    body {
-        background-size: cover;
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        height: 100%;
-        background-image: url("https://ah4axr.github.io/temp/Back.png");
-        background-repeat: no-repeat;
-    }
-
-    #content {
-        padding-top: 14%;
-        display: flex;
-        flex-direction: column;
-        width: 83%;
-        min-height: 100%;
-        padding-right: 3%;
-    }
-
-    h1 {
-        color: #3D66A1;
-    }
-
-    h3 {
-        color: #666666;
-    }
-
     #buttons {
         display: flex;
         width: 100%;
-        margin-bottom: 2%;
         justify-content: space-between;
     }
 
@@ -63,30 +22,39 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        height: 100%;
-        width: 100%;
     }
 
     #newQuestion {
-        width: 100%;
-        height: 78px;
         background-color: #FFFFFF;
         color: #666666;
         border-radius: 5px;
         font-size: 24px;
-        margin-top: 1%;
     }
 </style>
+<html>
 
 <body>
+    <img src='Top.png' />
     <div id='content'>
-        <div id='questionContainer'>
-            <button id='newQuestion'><a href="question1.html" style='color: #666666'>+ Add Question</a></button>
-        </div>
+        <img src='SideBar.png' />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
 
-        <div id="buttons">
-            <button class="btn btn-dark"><a href="assessments.html" style="color: white">Back</a></button>
-            <button class="btn btn-dark">Next</button>
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="assessments.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+                <div id='questionContainer'>
+                    <button id='newQuestion'><a href="question1.html" style='color: #666666'>+ Add Question</a></button>
+                </div>
+                <div id="buttons">
+                    <button class="btn btn-dark"><a href="assessments.html" style="color: white">Back</a></button>
+                    <button class="btn btn-dark">Next</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
