@@ -190,7 +190,15 @@
                 <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
             </div>
             <div id='container'>
-                <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
+                <div style="display: flex; flex-direction:row; justify-content:space-between; width: 100%">
+                    <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
+                    <div style="display: flex; flex-direction:row; justify-content:space-between;align-items:flex-end; padding-bottom: 10px">
+                        <button class="btn btn-light" id="lightButton" style="margin-right: 5px;"><a href="assessmentsFilterMenu.html" style="display: flex; flex-direction:row;color: #666666;"><img src="Filter.png" />Filter</a></button>
+                        <input class="form-control" type='text' style="margin-right: 5px;">
+                        <button class="btn btn-light" id="lightButton"><a href="notRelevant.html" style="color: #666666">Search</a></button>
+
+                    </div>
+                </div>
                 <div id='quiz'>
                     <div id='quizLeft'>
                         <p id='newQuizTitle'></p>
@@ -266,7 +274,7 @@
                 </div>
 
 
-                <div id='quiz'>
+                <div id='quiz' style="border-color:#7d83ba">
                     <div id='quizLeft'>
                         <p id='title'>Quiz 8</p>
                         <br />

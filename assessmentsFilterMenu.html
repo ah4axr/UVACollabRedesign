@@ -92,7 +92,26 @@
         color: #666666;
         font-size: 14px;
     }
+    #lightButton {
+        color: #666666;
+        border: 1px solid #666666;
+        border-radius: 5px;
+    }
+    #newMenu {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #666666;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
 
+    #menuTab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 20px;
+        padding: 3px;
+    }
 </style>
 <html>
 
@@ -113,10 +132,26 @@
                 <div style="display: flex; flex-direction:row; justify-content:space-between; width: 100%">
                     <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
                     <div style="display: flex; flex-direction:row; justify-content:space-between;align-items:flex-end; padding-bottom: 10px">
-                        <button class="btn btn-light" id="lightButton" style="margin-right: 5px;"><a href="assessmentsFilterMenu.html" style="display: flex; flex-direction:row;color: #666666;"><img src="Filter.png" />Filter</a></button>
+                        <div id="newMenu">
+                            <a href="activeNow.html" style="width: 100%; height: 100%">
+                                <div id="menuTab" style="border-bottom: 1px solid #666666;">
+                                    <p style="font-size: 10px; color: #666666">Active</p>
+                                </div>
+                            </a>
+                            <a href="ungraded.html" style="width: 100%; height: 100%">
+                                <div id="menuTab" style="border-bottom: 1px solid #666666;">
+                                    <p style="font-size: 10px; color: #666666">Ungraded</p>
+                                </div>
+                            </a>
+                            <a href="published.html" style="width: 100%; height: 100%">
+                                <div id="menuTab">
+                                    <p style="font-size: 10px; color: #666666">Published</p>
+                                </div>
+                            </a>
+                        </div>
+                        <button class="btn btn-light" id="lightButton" style="margin-right: 5px;"><a href="filterMenu.html" style="display: flex; flex-direction:row;color: #666666;"><img src="Filter.png" />Filter</a></button>
                         <input class="form-control" type='text' style="margin-right: 5px;">
                         <button class="btn btn-light" id="lightButton"><a href="notRelevant.html" style="color: #666666">Search</a></button>
-
                     </div>
                 </div>
                 <div id='quiz'>

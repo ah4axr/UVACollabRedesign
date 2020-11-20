@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>
+    </title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+    #box {
+        width: 192px;
+        height: 35px;
+        margin-bottom: 18px;
+    }
+
+    #buttons {
+        display: flex;
+        width: 80%;
+        padding-left: 20%;
+        justify-content: space-between;
+    }
+
+    #quiz {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid;
+        border-color: #c4c4c4;
+        border-radius: 5px;
+        padding-bottom: 1%;
+        margin-bottom: 1%;
+    }
+
+    #quizLeft {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1%;
+        padding-top: .5%;
+        width: 50%;
+        height: 80%;
+    }
+
+    #quizRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 1%;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    #title {
+        color: #666666;
+        font-size: 18px;
+    }
+
+    #textContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 17px;
+    }
+
+    #quizInfoText {
+        color: #666666;
+        font-size: 14px;
+    }
+
+    #quizButtons {
+        display: flex;
+        width: 80%;
+        height: 20%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #quizActive {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: flex-start;
+        padding: 1%;
+    }
+
+    #quizActiveText {
+        color: #666666;
+        font-size: 14px;
+    }
+</style>
+<html>
+
+<body>
+    <img src='Top.png' onClick="parent.location='notRelevant.html'" />
+    <div id='content'>
+        <img src='SideBar.png' onClick="parent.location='notRelevant.html'" />
+        <div id="main">
+            <img src='Title.png' style="width: 217px; height: 25px;" />
+
+            <div id="navBarButtons">
+                <button id="navButton"><a href="index.html" style="color:#666666; font-size: 18px; ">Assessments</a></button>
+                <button id="navButton"><a href="favorite.html" style="color:#666666; font-size: 18px; ">Favorite</a></button>
+                <button id="navButton"><a href="submissionsOverview.html" style="color:#666666; font-size: 18px; ">Submissions</a></button>
+                <button id="navButton"><a href="notRelevant.html" style="color:#666666; font-size: 18px; ">Students</a></button>
+            </div>
+            <div id='container'>
+                <div style="display: flex; flex-direction:row; justify-content:space-between; width: 100%">
+                    <button id='newAssessment'><a href="addQuestion.html" style="color: white">+ New Assessment</a></button>
+                    <div style="display: flex; flex-direction:row; justify-content:space-between;align-items:flex-end; padding-bottom: 10px">
+                        <button class="btn btn-light" id="lightButton" style="margin-right: 5px;"><a href="assessmentsFilterMenu.html" style="display: flex; flex-direction:row;color: #666666;"><img src="Filter.png" />Filter</a></button>
+                        <input class="form-control" type='text' style="margin-right: 5px;">
+                        <button class="btn btn-light" id="lightButton"><a href="notRelevant.html" style="color: #666666">Search</a></button>
+
+                    </div>
+                </div>
+                <div id='quiz' style="border-color:#7d83ba">
+                    <div id='quizLeft'>
+                        <p id='title'>Quiz 8</p>
+                        <br />
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Time Limit</p>
+                            <p id='quizInfoText'>15 mins (General), 22 mins 30 secs (SDAC 1.5x), 30 mins (SDAC 2x)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Released</p>
+                            <p id='quizInfoText'>Monday, October 26, 2020 at 12:00am (EST)</p>
+                        </div>
+                        <div id='textContainer'>
+                            <p id='quizInfoText'>Closed</p>
+                            <p id='quizInfoText'>Sunday, November 1, 2020 at 11:59pm (EST)</p>
+                        </div>
+                    </div>
+                    <div id='quizRight'>
+                        <div id='quizActive'>
+                            <p id='quizActiveText'>ACTIVE NOW</p>
+                            <p id='quizActiveText'>13 Assessments taken</p>
+                        </div>
+                        <div id='quizButtons'>
+                            <img id='bottomButton' src='Favorite.png' />
+                            <a href="submissionsOverview.html" style="color: white">
+                                <img id='bottomButton' src='Grades.png' />
+                            </a>
+                            <a href="settings.html" style="color: white">
+                                <img id='bottomButton' src='Edit.png' />
+                            </a>
+                            <a href="notRelevant.html" style="color: white">
+                                <img id='bottomButton' src='Copy.png' />
+                            </a>
+                            <a href="notRelevant.html" style="color: white">
+                                <img id='bottomButton' src='Delete.png' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
