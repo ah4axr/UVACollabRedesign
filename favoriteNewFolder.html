@@ -129,9 +129,9 @@
 <html>
 
 <body onload="process()">
-    <img src='Top.png' />
+    <img src='Top.png' onClick="parent.location='notRelevant.html'" />
     <div id='content'>
-        <img src='SideBar.png' />
+        <img src='SideBar.png' onClick="parent.location='notRelevant.html'" />
         <div id="main">
             <img src='Title.png' style="width: 217px; height: 25px;" />
 
@@ -150,8 +150,10 @@
                         <h3>Exams</h3>
                     </div>
                     <div id="folder">
-                        <img id='tabPic' src='Folder.png' />
-                        <h3 id='folderName'></h3>
+                        <a href="folderMenu.html" style="text-align: center">
+                            <img id='tabPic' src='Folder.png' />
+                            <h3 id='folderName'></h3>
+                        </a>
                     </div>
                 </div>
             </div>
