@@ -12,6 +12,7 @@
 
 <script src="dragDrop.js"></script>
 
+
 <style>
 
     #buttons {
@@ -41,20 +42,27 @@
     #questionHeaderText {
         color: #666666;
         font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    #answerHeaderText {
+        color: #666666;
+        font-size: 15px;
+        margin-bottom: 2px;
     }
 
     #questionText {
         color: #666666;
         font-size: 14px;
-        border: 1px solid #666666;
+        width: 80%;
     }
 
     #answerText {
         color: #666666;
         font-size: 12px;
-        width: 10%;
-        border: 1px solid #666666;
-        height: 15px;
+        width: 100%;
+        height: 20px;
+        margin-left: 10px;
     }
 
     #question {
@@ -64,6 +72,23 @@
         border-radius: 5px;
         padding: 1%;
         margin-top: 1%;
+    }
+
+    #radioTitle {
+        height: 20px;
+        margin: 2px;
+    }
+
+    .form-control {
+        width: 0%;
+    }
+
+    #radioTitles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 15%;
+        padding: 2px;
     }
 </style>
 
@@ -84,11 +109,30 @@
             <div id='container'>
                 <div id='questionContainer' class="container">
                     <div id='question' draggable="true" class="box">
-                        <p id='questionHeaderText'>Question 1</p>
+                        <h3>Question 1(Multiple Choice)</h3>
                         <br />
-                        <input class="form-control" type='text' id='questionText'>
+                        <p id='questionHeaderText'>Enter the question:</p>
 
-                        <input class="form-control" type='text' id='answerText'>
+                        <input class="form-control" type='text' id='questionText'>
+                        <br />
+                        <p id='answerHeaderText'>Enter the answer choices:</p>
+
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <input class="form-control" type='text' id='answerText'>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <input class="form-control" type='text' id='answerText'>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <input class="form-control" type='text' id='answerText'>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <input class="form-control" type='text' id='answerText'>
+                        </div>
                     </div>
                     <button id='newQuestion'><a href="question2.html" style='color: #666666'>+ Add Question</a></button>
 

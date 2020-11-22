@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        width: 100%;
     }
 
     #newQuestion {
@@ -40,20 +41,27 @@
     #questionHeaderText {
         color: #666666;
         font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    #answerHeaderText {
+        color: #666666;
+        font-size: 15px;
+        margin-bottom: 2px;
     }
 
     #questionText {
         color: #666666;
         font-size: 14px;
-        border: 1px solid transparent;
+        width: 80%;
     }
 
     #answerText {
         color: #666666;
         font-size: 12px;
-        width: 10%;
-        border: 1px solid transparent;
-        height: 15px;
+        width: 100%;
+        height: 20px;
+        margin-left: 10px;
     }
 
     #question {
@@ -63,7 +71,23 @@
         border-radius: 5px;
         padding: 1%;
         margin-top: 1%;
-        cursor: move;
+    }
+
+    #radioTitle {
+        height: 20px;
+        margin: 2px;
+    }
+
+    .form-control {
+        width: 0%;
+    }
+
+    #radioTitles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 15%;
+        padding: 2px;
     }
 </style>
 
@@ -84,40 +108,62 @@
             <div id='container'>
                 <div id='questionContainer' class="container">
                     <div id='question' draggable="true" class="box">
-                        <p id='questionHeaderText'>Question 1</p>
+                        <h3>Question 1(Multiple Choice)</h3>
                         <br />
+                        <p id='questionHeaderText'>Enter the question:</p>
+
                         <input class="form-control" type='text' id='questionText' value="What is the 4th planet from the sun?">
+                        <br />
+                        <p id='answerHeaderText'>Enter the answer choices:</p>
 
-                        <input class="form-control" type='text' id='answerText' value="○ Mercury">
-                        <input class="form-control" type='text' id='answerText' value="○ Venus">
-                        <input class="form-control" type='text' id='answerText' value="○ Earth">
-                        <input class="form-control" type='text' id='answerText' value="• Mars">
-                        <input class="form-control" type='text' id='answerText' value="○ Jupiter">
-                        <input class="form-control" type='text' id='answerText' value="○ Saturn">
-                        <input class="form-control" type='text' id='answerText' value="○ Uranus">
-                        <input class="form-control" type='text' id='answerText' value="○ Neptune">
-                        <input class="form-control" type='text' id='answerText' value="○ Pluto">
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <p id="answerText">Mercury</p>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <p id="answerText">Venus</p>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <p id="answerText">Earth</p>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <p id="answerText">Mars</p>
+                        </div>
                     </div>
                     <div id='question' draggable="true" class="box">
-                        <p id='questionHeaderText'>Question 2</p>
+                        <h3>Question 2(True/False)</h3>
                         <br />
+                        <p id='questionHeaderText'>Enter the question:</p>
+
                         <input class="form-control" type='text' id='questionText' value="Pluto is a dwarf planet.">
+                        <br />
+                        <p id='answerHeaderText'>Select an answer choices:</p>
 
-                        <input class="form-control" type='text' id='answerText' value="• True">
-                        <input class="form-control" type='text' id='answerText' value="○ Flase">
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice" value="Mercury">
+                            <p id="answerText">True</p>
+                        </div>
+                        <div id="radioTitles">
+                            <input class="form-control" type='radio' id='radioTitle' name="choice">
+                            <p id="answerText">False</p>
+                        </div>
                     </div>
                     <div id='question' draggable="true" class="box">
-                        <p id='questionHeaderText'>Question 3</p>
+                        <h3>Question 3(Short Answer)</h3>
                         <br />
-                        <input class="form-control" type='text' id='questionText' value="In 500 words or less, explain the theory of relativity.">
+                        <p id='questionHeaderText'>Enter the prompt:</p>
+                        <input class="form-control" type='text' id='questionText'>
                     </div>
-                    <button id='newQuestion'><a href="question3.html" style='color: #666666'>+ Add Question</a></button>
+                <button id='newQuestion'><a href="question3.html" style='color: #666666'>+ Add Question</a></button>
 
-                    <div id="buttons">
-                        <button class="btn btn-dark"><a href="question2.html" style="color: white">Back</a></button>
-                        <button class="btn btn-dark"><a href="settings.html" style="color: white">Next</a></button>
-                    </div>
+                <div id="buttons">
+                    <button class="btn btn-dark"><a href="question2.html" style="color: white">Back</a></button>
+                    <button class="btn btn-dark"><a href="settings.html" style="color: white">Next</a></button>
                 </div>
+            </div>
             </div>
         </div>
     </div>
