@@ -19,8 +19,13 @@
     body {
         background-image: url('FavoriteBack.png');
         min-height: 100%;
+    }
+
+    #centeringDiv {
+        display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
     }
 
     #popUp {
@@ -64,24 +69,26 @@
 <html>
 
 <body>
-    <div id="popUp">
-        <form method="GET" action="favoriteNewQuestion.html">
-            <input class="form-control" type='text' id="title" name='qName' value="Question Name" required>
-            <br />
-            <input class="form-control" type='text' id='questionText' value="Pluto is a dwarf planet." required>
+    <div id="centeringDiv">
+        <div id="popUp">
+            <form method="GET" action="favoriteNewQuestion.html">
+                <input class="form-control" type='text' id="title" name='qName' value="Question Name" required>
+                <br />
+                <input class="form-control" type='text' id='questionText' value="Pluto is a dwarf planet." required>
 
-            <input class="form-control" type='text' id='answerText' value="• True">
-            <input class="form-control" type='text' id='answerText' value="○ Flase">
-            <div id="buttons">
-                <button class="btn btn-dark"><a href="favorite.html" style="color: white" onclick="back()">Cancel</a></button>
-                <script>
-                    function back() {
-                    window.history.back();
-                    }
-                </script>
-                <input type="submit" value="Submit" class="btn btn-dark" />
-            </div>
-        </form>
+                <input class="form-control" type='text' id='answerText' value="• True">
+                <input class="form-control" type='text' id='answerText' value="○ Flase">
+                <div id="buttons">
+                    <button class="btn btn-dark"><a href="favorite.html" style="color: white" onclick="back()">Cancel</a></button>
+                    <script>
+                        function back() {
+                        window.history.back();
+                        }
+                    </script>
+                    <input type="submit" value="Submit" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

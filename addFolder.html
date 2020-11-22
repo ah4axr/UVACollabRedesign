@@ -15,11 +15,17 @@
     html {
         height: 100%;
     }
+
     body {
         background-image: url('FavoriteBack.png');
         min-height: 100%;
+    }
+
+    #centeringDiv {
+        display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
     }
     #popUp {
         display: flex;
@@ -43,20 +49,22 @@
 <html>
 
 <body>
-    <div id="popUp">
-        <form method="GET" action="favoriteNewFolder.html">
-            <h3>Folder Name</h3>
-            <input class="form-control" type='text' id="box" name='fName'>
-            <div id="buttons">
-                <button class="btn btn-dark"onclick="back()">Cancel</button>
-                <script>
-                    function back() {
-                    window.history.back();
-                    }
-                </script>
-                <input type="submit" value="Submit" class="btn btn-dark" />
-            </div>
-        </form>
+    <div id="centeringDiv">
+        <div id="popUp">
+            <form method="GET" action="favoriteNewFolder.html">
+                <h3>Folder Name</h3>
+                <input class="form-control" type='text' id="box" name='fName'>
+                <div id="buttons">
+                    <button class="btn btn-dark" onclick="back()">Cancel</button>
+                    <script>
+                        function back() {
+                        window.history.back();
+                        }
+                    </script>
+                    <input type="submit" value="Submit" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
