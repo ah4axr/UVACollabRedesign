@@ -11,22 +11,22 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <script>
-    
-  // Original JavaScript code by Chirp Internet: www.chirp.com.au
-  // Please acknowledge use of this code by including this header.
-  var today = new Date();
-  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-  function setCookie(name, value)
-  {
+
+    // Original JavaScript code by Chirp Internet: www.chirp.com.au
+    // Please acknowledge use of this code by including this header.
+    var today = new Date();
+    var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+    function setCookie(name, value)
+    {
     document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
-  }
-  function storeValues(settingsContainer)  
-  {
+    }
+    function storeValues(settingsContainer)
+    {
     setCookie("qTitle", settingsContainer.qTitle.value);
     return true;
-  }
-  
-  if(qTitle = getCookie("qTitle")) document.getElementById(settingsContainer).qTitle.value = qTitle;
+    }
+
+    if(qTitle = getCookie("qTitle")) document.getElementById(settingsContainer).qTitle.value = qTitle;
 </script>
 
 <style>
@@ -46,6 +46,7 @@
         height: 35px;
         margin-bottom: 18px;
     }
+
     #buttons {
         display: flex;
         width: 100%;
@@ -62,9 +63,9 @@
 <html>
 
 <body>
-    <img src='Top.png' onClick="parent.location='notRelevant.html'"/>
+    <img src='Top.png' onClick="parent.location='notRelevant.html'" />
     <div id='content'>
-        <img src='SideBar.png' onClick="parent.location='notRelevant.html'"/>
+        <img src='SideBar.png' onClick="parent.location='notRelevant.html'" />
         <div id="main">
             <img src='Title.png' style="width: 217px; height: 25px;" />
 
@@ -77,41 +78,41 @@
             <div id='container'>
                 <form id='settingsContainer' method="GET" action="assessmentsNew.html">
                     <h3>Assessment Title:</h3>
-                    <input class="form-control" type='text' id="title" name='qTitle' required>
+                    <input class="form-control" type='text' id="title" name='qTitle' value="Quiz 7" required>
                     <h3>Open Date:</h3>
 
                     <div id='ins'>
-                        <input class="form-control" type='date' id="box" style="margin-right: 18px" name='openDate' required>
-                        <input class="form-control" type='time' id="box" name='openTime' required>
+                        <input class="form-control" type='date' id="box" style="margin-right: 18px" name='openDate' value="2020-11-22" required>
+                        <input class="form-control" type='time' id="box" name='openTime' value="13:45:00" required>
                     </div>
 
                     <h3>Due Date:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='date' id="box" style="margin-right: 18px" name='dueDate' required>
-                        <input class="form-control" type='time' id="box" name='dueTime' required>
+                        <input class="form-control" type='date' id="box" style="margin-right: 18px" name='dueDate' value="2020-11-23" required>
+                        <input class="form-control" type='time' id="box" name='dueTime' value="23:59:59" required>
                     </div>
 
                     <h3>Time Limit(s):</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' required>
-                        <input class="form-control" type='text' id="box" name='tLim1b' required>
+                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' value="15 mins" required>
+                        <input class="form-control" type='text' id="box" name='tLim1b' value="Non-SDAC" required>
                     </div>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim2a'>
-                        <input class="form-control" type='text' id="box" name='tLim2b'>
+                        <input class="form-control" type='text' id="box" style="margin-right: 18px" value="22 mins 30 secs" name='tLim2a'>
+                        <input class="form-control" type='text' id="box" value="SDAC 1.5x" name='tLim2b'>
                     </div>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim3a'>
-                        <input class="form-control" type='text' id="box" name='tLim3b'>
+                        <input class="form-control" type='text' id="box" style="margin-right: 18px" value="30 mins" name='tLim3a'>
+                        <input class="form-control" type='text' id="box" value="SDAC 2x" name='tLim3b'>
                     </div>
 
                     <h3>Allowed Resubmissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='resub' required>
+                        <input class="form-control" type='text' id="box" name='resub' value="No" required>
                     </div>
                     <h3>Allowed Late Submissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='lateSub' required>
+                        <input class="form-control" type='text' id="box" name='lateSub' value="No" required>
                     </div>
 
                     <div id="buttons">
