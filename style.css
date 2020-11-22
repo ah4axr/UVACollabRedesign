@@ -1,16 +1,7 @@
 
-html {
-    width: 100%;
-    min-height: 100%;
-    overflow: auto;
-}
-
-body {
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+html, body {
     height: 100%;
+    width: 100%;
 }
 
 #content {
