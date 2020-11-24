@@ -39,12 +39,20 @@
     #ins {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
     #box {
         width: 192px;
         height: 35px;
         margin-bottom: 18px;
+    }
+
+    #dropBox {
+        width: 80px;
+        height: 35px;
+        margin-bottom: 18px;
+        margin-right: 5px;
     }
 
     #buttons {
@@ -94,25 +102,27 @@
 
                     <h3>Time Limit(s):</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' value="15 mins" required>
-                        <input class="form-control" type='text' id="box" name='tLim1b' value="Non-SDAC" required>
-                    </div>
-                    <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" value="22 mins 30 secs" name='tLim2a'>
-                        <input class="form-control" type='text' id="box" value="SDAC 1.5x" name='tLim2b'>
-                    </div>
-                    <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" value="30 mins" name='tLim3a'>
-                        <input class="form-control" type='text' id="box" value="SDAC 2x" name='tLim3b'>
+                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' value="30 mins" required>
+                        <input class="form-control" type='text' id="box" name='tLim1b' value="SDAC 2x" required>
                     </div>
 
                     <h3>Allowed Resubmissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='resub' value="No" required>
+                        <select class="form-control" id="dropBox" name="resub">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p style="color: #666666; font-size: 18px; padding-right: 5px;">Until:</p>
+                        <input class="form-control" type='date' id="box" name='resubDate' value="2020-11-22" required>
                     </div>
                     <h3>Allowed Late Submissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='lateSub' value="No" required>
+                        <select class="form-control" id="dropBox" name="lateSub">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p style="color: #666666; font-size: 18px; padding-right: 5px;">Until:</p>
+                        <input class="form-control" type='date' id="box" name='lateSubDate' value="2020-11-22" required>
                     </div>
 
                     <div id="buttons">

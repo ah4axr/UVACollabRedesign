@@ -58,6 +58,12 @@
         border: 1px solid #c4c4c4;
         font-size: 36px;
     }
+    #dropBox {
+        width: 80px;
+        height: 35px;
+        margin-bottom: 18px;
+        margin-right: 5px;
+    }
 </style>
 <html>
 
@@ -96,22 +102,24 @@
                         <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim1a' required>
                         <input class="form-control" type='text' id="box" name='tLim1b' required>
                     </div>
-                    <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim2a'>
-                        <input class="form-control" type='text' id="box" name='tLim2b'>
-                    </div>
-                    <div id='ins'>
-                        <input class="form-control" type='text' id="box" style="margin-right: 18px" name='tLim3a'>
-                        <input class="form-control" type='text' id="box" name='tLim3b'>
-                    </div>
 
                     <h3>Allowed Resubmissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='resub' required>
+                        <select class="form-control" id="dropBox" name="resub">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p style="color: #666666; font-size: 18px; padding-right: 5px;">Until:</p>
+                        <input class="form-control" type='date' id="box" name='resubDate' required>
                     </div>
                     <h3>Allowed Late Submissions:</h3>
                     <div id='ins'>
-                        <input class="form-control" type='text' id="box" name='lateSub' required>
+                        <select class="form-control" id="dropBox" name="lateSub">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                        <p style="color: #666666; font-size: 18px; padding-right: 5px;">Until:</p>
+                        <input class="form-control" type='date' id="box" name='lateSubDate' required>
                     </div>
 
                     <div id="buttons">
